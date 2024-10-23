@@ -1,3 +1,4 @@
+import { Banner } from "./Component/Banner/Banner";
 import Header from "./Component/Header/Header";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
       {/* header */}
       <Header></Header>
       {/* banner section */}
+      <Banner></Banner>
       {/* our recipes */}
     </div>
   );
