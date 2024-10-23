@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 
-export const Recipe = ({ recipe }) => {
+export const Recipe = ({ recipe, handleWantToCook }) => {
   const {
+    recipe_id,
     recipe_name,
     recipe_img,
     short_description,
@@ -43,7 +44,10 @@ export const Recipe = ({ recipe }) => {
             </div>
           </div>
           <div className="card-actions">
-            <button className="btn bg-[#0BE58A] rounded-full">
+            <button
+              onClick={() => handleWantToCook(recipe_id)}
+              className="btn bg-[#0BE58A] rounded-full"
+            >
               Want to Cook
             </button>
           </div>

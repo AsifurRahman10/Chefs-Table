@@ -1,14 +1,23 @@
 import { useState } from "react";
 import { Recipe } from "../Recipe.jsx/Recipe";
 import { useEffect } from "react";
+import Checkout from "../Checkout/Checkout";
 
 export const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
+  const [addToCook, setAddToCook] = useState([]);
   useEffect(() => {
     fetch("Recipes.json")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
+  const handleWantToCook = (id) => {
+    const sentToCook = recipes.find((recipe) => recipe.recipe_id === id);
+    if (sentToCook) {
+      const sentToCookContainer = [...addToCook, sentToCook];
+      setAddToCook(sentToCookContainer);
+    }
+  };
   return (
     <div className="mt-14 lg:mt-24">
       <div className="lg:w-8/12 mx-auto text-center space-y-4 mb-10">
@@ -23,10 +32,14 @@ export const Recipes = () => {
       <div className="flex lg:flex-row flex-col">
         <div className="grid gap-4 items-center grid-cols-1 lg:grid-cols-2 mb-10">
           {recipes.map((recipe) => (
-            <Recipe key={recipe.id} recipe={recipe}></Recipe>
+            <Recipe
+              handleWantToCook={handleWantToCook}
+              key={recipe.id}
+              recipe={recipe}
+            ></Recipe>
           ))}
         </div>
-        <div>Checkout</div>
+        <Checkout addToCook={addToCook}></Checkout>
       </div>
     </div>
   );
