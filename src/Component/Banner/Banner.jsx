@@ -3,7 +3,7 @@ export const Banner = () => {
     <div className="mt-3">
       <div>
         <div className="bg-hero-pattern bg-no-repeat bg-center w-full bg-cover rounded-2xl">
-          <div className="lg:w-8/12 mx-auto text-center py-20 md:py-56 text-white space-y-6">
+          <div className="mx-1 lg:w-8/12 lg:mx-auto text-center py-20 md:py-56 text-white space-y-3 lg:space-y-6">
             <h2 className="text-3xl lg:text-5xl font-bold">
               Discover an exceptional cooking class tailored for you!
             </h2>

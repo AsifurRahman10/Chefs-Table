@@ -4,11 +4,7 @@ const Header = () => {
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <div
-              tabIndex="0"
-              role="button"
-              className="btn btn-ghost lg:hidden mr-2"
-            >
+            <div tabIndex="0" role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -42,7 +38,14 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="text-2xl lg:text-3xl font-bold">Recipe Calories</a>
+          <div className="hidden lg:block">
+            <h2 className="text-xl lg:text-3xl font-bold">Recipe Calories</h2>
+          </div>
+        </div>
+        <div className="block lg:hidden w-fit">
+          <h2 className="text-xl lg:text-3xl font-bold  w-[165px]">
+            Recipe Calories
+          </h2>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -61,7 +64,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <div>
+          <div className="hidden md:block">
             <label className="input input-bordered flex items-center gap-2 rounded-full bg-[#f3f3f4] border-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

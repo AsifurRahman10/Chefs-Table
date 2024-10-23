@@ -1,0 +1,109 @@
+[
+  {
+    "recipe_id": 1,
+    "recipe_name": "Spaghetti Carbonara",
+    "recipe_img": "https://i.ibb.co.com/PmL0Ydq/Spaghetti-Carbonara.webp",
+    "short_description": "Classic Italian pasta with creamy egg sauce, pancetta, and Parmesan.",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Pancetta",
+      "Parmesan cheese",
+      "Black pepper",
+      "Salt"
+    ],
+    "preparing_time": "20 minutes",
+    "calories": 550
+  },
+  {
+    "recipe_id": 2,
+    "recipe_name": "Grilled Chicken Salad",
+    "recipe_img": "https://i.ibb.co.com/jkp0wd9/Grilled-Chicken-Salad.webp",
+    "short_description": "Healthy grilled chicken salad with mixed greens, avocado, and vinaigrette.",
+    "ingredients": [
+      "Chicken breast",
+      "Mixed greens",
+      "Avocado",
+      "Cherry tomatoes",
+      "Olive oil",
+      "Lemon juice",
+      "Salt",
+      "Pepper"
+    ],
+    "preparing_time": "15 minutes",
+    "calories": 400
+  },
+  {
+    "recipe_id": 3,
+    "recipe_name": "Beef Tacos",
+    "recipe_img": "https://i.ibb.co.com/FnHdKt3/Beef-Tacos.jpg",
+    "short_description": "Tasty beef tacos with salsa, cheese, and lettuce.",
+    "ingredients": [
+      "Ground beef",
+      "Taco shells",
+      "Cheddar cheese",
+      "Lettuce",
+      "Salsa",
+      "Onion",
+      "Garlic",
+      "Cumin",
+      "Salt"
+    ],
+    "preparing_time": "30 minutes",
+    "calories": 600
+  },
+  {
+    "recipe_id": 4,
+    "recipe_name": "Vegetable Stir-Fry",
+    "recipe_img": "https://i.ibb.co.com/VBGdffX/Vegetable-Stir-Fry.jpg",
+    "short_description": "Quick and easy stir-fry with a mix of colorful vegetables.",
+    "ingredients": [
+      "Broccoli",
+      "Bell peppers",
+      "Carrots",
+      "Snow peas",
+      "Soy sauce",
+      "Garlic",
+      "Ginger",
+      "Olive oil",
+      "Sesame seeds"
+    ],
+    "preparing_time": "20 minutes",
+    "calories": 250
+  },
+  {
+    "recipe_id": 5,
+    "recipe_name": "Chicken Alfredo",
+    "recipe_img": "https://i.ibb.co.com/RpWsTqT/Chicken-Alfredo.jpg",
+    "short_description": "Creamy chicken Alfredo pasta with a rich Parmesan sauce.",
+    "ingredients": [
+      "Fettuccine",
+      "Chicken breast",
+      "Heavy cream",
+      "Parmesan cheese",
+      "Garlic",
+      "Butter",
+      "Salt",
+      "Pepper"
+    ],
+    "preparing_time": "25 minutes",
+    "calories": 700
+  },
+  {
+    "recipe_id": 6,
+    "recipe_name": "Chocolate Brownies",
+    "recipe_img": "https://i.ibb.co.com/bsp9RfZ/Chocolate-Brownies.jpg",
+    "short_description": "Rich, fudgy chocolate brownies with a crispy top.",
+    "ingredients": [
+      "Butter",
+      "Sugar",
+      "Cocoa powder",
+      "Eggs",
+      "Flour",
+      "Vanilla extract",
+      "Salt"
+    ],
+    "preparing_time": "35 minutes",
+    "calories": 450
+  }
+]

@@ -1,5 +1,6 @@
 import { Banner } from "./Component/Banner/Banner";
 import Header from "./Component/Header/Header";
+import { Recipes } from "./Component/Recipes/Recipes";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* banner section */}
       <Banner></Banner>
       {/* our recipes */}
+      <Recipes></Recipes>
     </div>
   );
 }
