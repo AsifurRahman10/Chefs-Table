@@ -6,6 +6,17 @@ import Checkout from "../Checkout/Checkout";
 export const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [addToCook, setAddToCook] = useState([]);
+  const [sentForCook, setSentForCook] = useState([]);
+  const [totalTime, setTotalTime] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0);
+  const handleCurrentlyCooking = (item) => {
+    const newSentForCook = [...sentForCook, item];
+    setSentForCook(newSentForCook);
+    const newAddToCook = addToCook.filter(
+      (items) => items.recipe_id !== item.recipe_id
+    );
+    setAddToCook(newAddToCook);
+  };
   useEffect(() => {
     fetch("Recipes.json")
       .then((res) => res.json())
@@ -13,10 +24,19 @@ export const Recipes = () => {
   }, []);
   const handleWantToCook = (id) => {
     const sentToCook = recipes.find((recipe) => recipe.recipe_id === id);
+    const alreadyAdded = addToCook.find((recipe) => recipe.recipe_id === id);
+    if (alreadyAdded) {
+      return alert("this is already added");
+    }
     if (sentToCook) {
       const sentToCookContainer = [...addToCook, sentToCook];
       setAddToCook(sentToCookContainer);
     }
+  };
+  const calculateTotalCount = (preparing_time, calories) => {
+    const time = Number(preparing_time.slice(0, 2));
+    setTotalTime(totalTime + time);
+    setTotalCalories(totalCalories + calories);
   };
   return (
     <div className="mt-14 lg:mt-24">
@@ -39,7 +59,14 @@ export const Recipes = () => {
             ></Recipe>
           ))}
         </div>
-        <Checkout addToCook={addToCook}></Checkout>
+        <Checkout
+          handleCurrentlyCooking={handleCurrentlyCooking}
+          calculateTotalCount={calculateTotalCount}
+          addToCook={addToCook}
+          sentForCook={sentForCook}
+          totalTime={totalTime}
+          totalCalories={totalCalories}
+        ></Checkout>
       </div>
     </div>
   );

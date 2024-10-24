@@ -1,11 +1,17 @@
 import PropTypes from "prop-types";
 import { WantToCookRow } from "../WantToCookRow/WantToCookRow";
 
-const WantToCook = ({ addToCook }) => {
+const WantToCook = ({
+  addToCook,
+  handleCurrentlyCooking,
+  calculateTotalCount,
+}) => {
   // cons t { recipe_name, preparing_time, calories } = addToCook;
   return (
     <div className="mt-4">
-      <h2 className="font-semibold text-2xl text-center">Want to cook: 01</h2>
+      <h2 className="font-semibold text-2xl text-center">
+        Want to cook: {addToCook.length}
+      </h2>
       <hr className="w-2/3 mx-auto my-2" />
       <div>
         <div className="overflow-x-auto">
@@ -22,7 +28,13 @@ const WantToCook = ({ addToCook }) => {
             <tbody>
               {/* row 1 */}
               {addToCook.map((item, idx) => (
-                <WantToCookRow key={idx} item={item}></WantToCookRow>
+                <WantToCookRow
+                  key={idx}
+                  index={idx + 1}
+                  item={item}
+                  handleCurrentlyCooking={handleCurrentlyCooking}
+                  calculateTotalCount={calculateTotalCount}
+                ></WantToCookRow>
               ))}
             </tbody>
           </table>
@@ -34,6 +46,8 @@ const WantToCook = ({ addToCook }) => {
 
 WantToCook.propTypes = {
   addToCook: PropTypes.array.isRequired,
+  handleCurrentlyCooking: PropTypes.func.isRequired,
+  calculateTotalCount: PropTypes.func.isRequired,
 };
 
 export default WantToCook;
